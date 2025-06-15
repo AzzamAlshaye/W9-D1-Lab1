@@ -16,8 +16,9 @@ const htmlBody = `<!DOCTYPE html>
 
 const imgFile = fs.readFileSync("./Image.png");
 const server = createServer((req, res) => {
+  // res.writeHead(303, { "Content-Type": "image/jpg" });
+  //Location:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/960px-A_small_cup_of_coffee.JPG"
   res.writeHead(200, { "Content-Type": "image/png" });
-  //Location:"https://www.youtube.com/"
   res.end(imgFile);
 });
 
